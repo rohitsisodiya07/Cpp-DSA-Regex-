@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void checkposneg(){
+int n ;
+cout << "Enter Number = " ;
+cin >> n ;
+    if( n > 0) cout << "Positive" ;
+    else if( n == 0 ) cout << "Zero" ;
+    else cout<< "Negative" ;
+}
+int main()
+{
+    checkposneg();
+}
