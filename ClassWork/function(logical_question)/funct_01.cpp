@@ -1,3 +1,6 @@
+// Q1. Car Parking System
+
+
 #include<bits/stdc++.h>
 using namespace std ;
 
@@ -47,7 +50,5 @@ int main(){
         int disc = (total*10) / 100 ;
         total -= disc ;
     }
-    cout << "Your Total Amount After Discount = " << total ;
-    
-    
+    cout << "Your Total Amount After Discount = " << total ; 
 }
