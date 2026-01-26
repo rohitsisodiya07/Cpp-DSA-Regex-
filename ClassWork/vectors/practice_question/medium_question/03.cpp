@@ -6,14 +6,15 @@ int main()
 {
 
     vector<int> v = {2, 4, 6, 8, 10, 4, 10, 8, 6, 7, 2};
-    map <int, int> m ;
-    for( auto ch : v){
+    map<int, int> m;
+    for (auto ch : v)
+    {
 
-        m[ch]++ ;
+        m[ch]++;
     }
-    for( auto ch : m){
+    for (auto ch : m)
+    {
 
-        cout << ch.first << " => " << ch.second << endl ;
+        cout << ch.first << " => " << ch.second << endl;
     }
-    
 }
