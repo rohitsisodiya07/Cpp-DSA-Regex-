@@ -3,9 +3,9 @@ using namespace std;
 
 int main()
 {
-    int num ;
-    cout << "Enter Number = " ;
-    cin >> num ;
+    int num=4 ;
+    // cout << "Enter Number = " ;
+    // cin >> num ;
     int temp = 1 ;
     for( int i = 0 ; i <= num ; i++){
         
