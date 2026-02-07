@@ -1,4 +1,4 @@
-//Print OnlySum of All Value.
+//Print Sum of All Value.
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,4 +1,4 @@
-//Delete First and Last Element odf Queue.
+//Delete First and Last Element of Queue.
 
 #include <bits/stdc++.h>
 using namespace std;
