@@ -1,27 +1,23 @@
-// Remove all occurrences of a character from a string using recursion
+// Find minimum element in an array using recursion
 
 #include <bits/stdc++.h>
 using namespace std;
 
-void removeChar(string str, int i, char ch, string &ans)
+void getMinimum(int i, vector<int> v, int &mini)
 {
 
-    if (i == str.size())
+    if (i == v.size())
         return;
-
-    if (str[i] != ch)
-        ans += str[i];
-
-    removeChar(str, i + 1, ch, ans);
+    mini = min(mini, v[i]);
+    getMinimum(i + 1, v, mini);
 }
 int main()
 {
 
-    string str = "Rohit Sisodiya";
+    vector<int> v = {20, 60, 9, 12, 200, 25, 32, 400, 50, 10, 20};
     int i = 0;
-    char ch = 'o';
-    string ans = "";
+    int mini = INT_MAX;
 
-    removeChar(str, i, ch, ans);
-    cout << "String After Removed Character = " << ans;
+    getMinimum(i, v, mini);
+    cout << "Minimum = " << mini;
 }
