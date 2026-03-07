@@ -1,19 +1,19 @@
-// Check if array is sorted
-
 #include <bits/stdc++.h>
-using namespace std ;
 
-int main(){
+using namespace std;
 
-    vector <int> v = {2, 4, 6, 7, 8, 10} ;
-    bool check = true ;
-    for( int i = 0 ; i < v.size() ; i++){
+int main()
+{
 
-        if( v[i] > v[i+1]){
-            check = false ;
-            break ;
+    vector<int> v = {10, 20, 35, 15, 55};
+    for (int i = 0; i < v.size(); i++)
+    {
+
+        if (v[i] > v[i + 1])
+        {
+            cout << "Array is Not Sorted";
+            return 0;
         }
     }
-    if(check) cout << "Array is Sorted" ;
-    else cout << "Array is Not Sorted" ;
+    cout << "Array is Sorted";
 }
