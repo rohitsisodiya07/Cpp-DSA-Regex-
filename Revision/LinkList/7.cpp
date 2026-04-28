@@ -69,6 +69,36 @@ void deleteFront(ListNode *&head)
     head = head->next;
     delete temp;
 }
+void deleteLast(ListNode *&head)
+{
+
+    ListNode *temp = head;
+    ListNode *prev = head;
+    while (temp->next != NULL)
+    {
+
+        prev = temp;
+        temp = temp->next;
+    }
+    prev->next = NULL;
+    delete temp;
+}
+void deleteGiven(ListNode *&head, int pos)
+{
+
+    ListNode *temp = head;
+    ListNode *prev = head;
+    while (pos > 1)
+    {
+
+        prev = temp;
+        temp = temp->next;
+        pos--;
+    }
+    prev->next = temp->next;
+    // temp->next = NULL ;
+    delete temp;
+}
 
 int main()
 {
@@ -78,5 +108,7 @@ int main()
     insertLast(head, 40);
     insertGiven(head, 25, 3);
     deleteFront(head);
+    deleteLast(head);
+    deleteGiven(head, 2) ;
     printNode(head);
 }

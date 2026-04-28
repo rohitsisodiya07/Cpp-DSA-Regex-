@@ -1,4 +1,4 @@
-// Delete at Front in  LinkList
+// Delete at Last in  LinkList
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -69,6 +69,21 @@ void deleteFront(ListNode *&head)
     head = head->next;
     delete temp;
 }
+void deleteLast(ListNode *&head)
+{
+
+    ListNode *temp = head;
+    ListNode *prev = head;
+    while (temp->next != NULL)
+    {
+
+        prev = temp;
+        temp = temp->next;
+    }
+    prev->next = NULL;
+    delete temp;
+}
+
 
 int main()
 {
@@ -78,5 +93,6 @@ int main()
     insertLast(head, 40);
     insertGiven(head, 25, 3);
     deleteFront(head);
+    deleteLast(head);
     printNode(head);
 }
