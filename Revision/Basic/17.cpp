@@ -6,6 +6,27 @@ using namespace std;
 int main()
 {
 
-  vector <int> v = {1,2,3,4} ;
-  
+  vector<int> nums = {1, 2, 3, 4};
+  int n = nums.size();
+  vector<int> ans(n, 1);
+
+  int preffix = 1;
+  for (int i = 0; i < n; i++)
+  {
+
+    ans[i] = preffix;
+    preffix *= nums[i];
+  }
+
+  int suffix = 1;
+  for (int i = n - 1; i >= 0; i--)
+  {
+
+    ans[i] *= suffix;
+    suffix *= nums[i];
+  }
+  for (auto ch : ans)
+  {
+    cout << ch << " ";
+  }
 }
