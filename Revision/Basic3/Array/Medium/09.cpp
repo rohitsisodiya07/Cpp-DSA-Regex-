@@ -1,4 +1,4 @@
-// 8 Rotate array elements by 1 position to the left.
+// 9 Rotate array elements by 1 position to the right.
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -11,12 +11,12 @@ int main()
         cout << "Invalid or Emplty Vector";
         return 0;
     }
-    int num = v[0];
-    for (int i = 0; i < v.size() - 1; i++)
+    int num = v[v.size() - 1];
+    for (int i = v.size() - 2; i >= 0; i--)
     {
-        v[i] = v[i + 1];
+        v[i + 1] = v[i];
     }
-    v[v.size() - 1] = num;
+    v[0] = num;
     for (auto ch : v)
     {
         cout << ch << ' ';
